@@ -21,7 +21,7 @@ A LMStudio plugin that gives AI the ability to run Python code in a sandboxed en
 
 3. Build the plugin:
    ```bash
-   npm run build
+   lms dev
    ```
 
 4. Deploy to LMStudio or use `npm run dev` for development
@@ -83,28 +83,6 @@ Manage Python packages directly from the AI.
 **Parameters**:
 - `action` (enum): "install", "uninstall", or "list"
 - `package` (string, optional): Package name (required for install/uninstall)
-
-**Example**:
-```bash
-# Install
-install_package(action: "install", package: "requests")
-
-# List
-install_package(action: "list")
-
-# Uninstall
-install_package(action: "uninstall", package: "requests")
-```
-
-## NPM Scripts
-
-- `npm run dev` - Run in development mode with hot reload
-- `npm run push` - Push to LMStudio
-- `npm run build` - Compile TypeScript to JavaScript
-- `npm run typecheck` - Run TypeScript type checking
-- `npm run venv:create` - Create/upgrade .venv on Windows
-- `npm run venv:create:unix` - Create/upgrade .venv on Unix/macOS
-- `npm run pip` - Run pip commands (e.g., `npm run pip -- install requests`)
 
 ## Project Structure
 
